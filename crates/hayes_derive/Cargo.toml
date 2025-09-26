@@ -1,0 +1,18 @@
+[package]
+name = "hayes_derive"
+version = "0.1.0"
+categories = ["no-std", "no-std::no-alloc"]
+description = "Derive macros for the hayes crate"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+proc-macro2 = "1.0.101"
+quote = "1.0.40"
+syn = "2.0.106"
+
+[features]
+defmt = []

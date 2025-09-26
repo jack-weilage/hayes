@@ -1,0 +1,6 @@
+target/
+
+# AI files
+AGENTS.md
+CLAUDE.md
+.specify/
