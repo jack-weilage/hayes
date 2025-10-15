@@ -2,9 +2,11 @@
 name = "hayes"
 version = "0.1.0"
 categories = ["embedded", "no-std", "no-std::no-alloc"]
+keywords = ["at", "no-std", "no-alloc"]
 description = "A lightweight AT command parser and generator for embedded systems"
 edition = "2024"
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/jack-weilage/hayes"
 
 [dependencies]
 hayes_derive = { path = "../hayes_derive", optional = true }

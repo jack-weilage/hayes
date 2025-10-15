@@ -34,8 +34,7 @@ impl core::fmt::Display for HayesError {
                 available,
             } => write!(
                 f,
-                "Insufficient buffer space: required {}, available {}",
-                required, available
+                "Insufficient buffer space: required {required}, available {available}",
             ),
             HayesError::ParseError => write!(f, "Failed to parse input"),
             HayesError::InvalidFormat => write!(f, "Invalid format"),
@@ -43,8 +42,8 @@ impl core::fmt::Display for HayesError {
             HayesError::InvalidUtf8 => write!(f, "Invalid UTF-8 in string data"),
             HayesError::UnexpectedEnd => write!(f, "Unexpected end of input"),
             HayesError::ModemError => write!(f, "Modem returned ERROR"),
-            HayesError::CmeError(code) => write!(f, "CME ERROR: {}", code),
-            HayesError::CmsError(code) => write!(f, "CMS ERROR: {}", code),
+            HayesError::CmeError(code) => write!(f, "CME ERROR: {code}"),
+            HayesError::CmsError(code) => write!(f, "CMS ERROR: {code}"),
         }
     }
 }

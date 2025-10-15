@@ -17,11 +17,11 @@ impl<'a> BufferWriter<'a> {
     }
 }
 
-impl<'a> ::core::fmt::Write for BufferWriter<'a> {
-    fn write_str(&mut self, s: &str) -> ::core::fmt::Result {
+impl core::fmt::Write for BufferWriter<'_> {
+    fn write_str(&mut self, s: &str) -> core::fmt::Result {
         let bytes = s.as_bytes();
         if self.pos + bytes.len() > self.buffer.len() {
-            return Err(::core::fmt::Error);
+            return Err(core::fmt::Error);
         }
         self.buffer[self.pos..self.pos + bytes.len()].copy_from_slice(bytes);
         self.pos += bytes.len();

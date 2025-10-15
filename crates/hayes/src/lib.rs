@@ -37,10 +37,16 @@
 //! }
 //! ```
 
+#![deny(clippy::cargo, missing_docs)]
+#![warn(clippy::all, clippy::pedantic)]
+
 mod error;
 mod impls;
 
 pub use error::HayesError;
+
+// #[cfg(feature = "derive")]
+// pub use hayes_derive::{Command, Response};
 
 /// Trait for types that can be read from AT command/response buffers
 ///
