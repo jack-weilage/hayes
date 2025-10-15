@@ -38,6 +38,7 @@
 //! ```
 
 mod error;
+mod impls;
 
 pub use error::HayesError;
 
